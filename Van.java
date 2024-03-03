@@ -6,14 +6,14 @@
  */
 class Van extends Vehicle{
 
-    private double rate=235;
-    private double lateFee=299;
+    private double rate=75;
+    private double lateFee=100;
 
     //Constructor to accept van details
     Van(String vehicleId,int year,String make,String model,int status,VehicleType vehicleType)
     {
         super(vehicleId,year,make,model,status,vehicleType);
-        this.rate=rate;
+        //this.rate=rate;
     }
 
     /**

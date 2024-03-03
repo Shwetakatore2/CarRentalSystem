@@ -1,14 +1,13 @@
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.*;
-import java.io.*;
 
 /**
  * This the main class used to get details from the user and display the menu driven options
  * This class acts as the businedd layer in our applications
  */
 
-class  ThriftyRentSystem{
+class  CarRentalSystem{
 	//cars and vans are two collections used to store cars of type Cars and vans of type Vans respectively
     private Car cars[] = new Car[50];
     private Van vans[] = new Van[50];
@@ -23,7 +22,7 @@ class  ThriftyRentSystem{
 
 		while (true) {
 
-			System.out.println("\n**** ThriftyRent SYSTEM MENU ****\n");
+			System.out.println("\n**** Car Rental System Menu ****\n");
 			System.out.println("Add vehicle:            1");
 			System.out.println("Rent vehicle:           2");
 			System.out.println("Return vehicle:         3");
@@ -74,7 +73,7 @@ class  ThriftyRentSystem{
 		String vehicleID="";
 		int seats=0;
 		String maintenanceDate=null;
-		int perDayRent=0;
+		//int perDayRent=0;
 		System.out.print("Vehicle Type(Van or Car): ");
 		String vehicleType = scan.nextLine();
 		while (!(vehicleType.equalsIgnoreCase("car") ||vehicleType.equalsIgnoreCase("van")))
@@ -84,7 +83,7 @@ class  ThriftyRentSystem{
 		}
 		System.out.print("Year: ");
 		int year = Integer.parseInt(scan.nextLine());
-		while (year<0 || year >2019)
+		while (year<0 || year > 2024)
 		{
 			System.out.println("Please enter a valid year");
 			year=Integer.parseInt(scan.nextLine());
@@ -447,7 +446,7 @@ class  ThriftyRentSystem{
                 if ((this.cars[i].getVehicleId()).equals(id))
                 {
 				    System.out.print("Maintenance completion date (dd/mm/yyyy): ");
-				    String date = sc.next();
+				   // String date = sc.next();
 				   if(this.cars[i].completeMaintenance())
 					   System.out.println("Vehicle "+id+" has all maintenance completed and ready for rent");
 				   else{

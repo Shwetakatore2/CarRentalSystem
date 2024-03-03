@@ -8,7 +8,7 @@
 public class Car extends  Vehicle {
 
 
-    private double rentRate=78;
+    private double rentRate=50;
     private double lateFee;
     private int seats=0;
 
@@ -17,7 +17,7 @@ public class Car extends  Vehicle {
         super(VehicleId,Year,Make,Model,status,vehicleType);
         seats=vehicleType.getCarSeats();
         if(seats==7)
-            rentRate=113;
+            rentRate=75;
     }
 
     /**
